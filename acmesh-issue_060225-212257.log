@@ -1,0 +1,51 @@
+
+[1;32;40m-----------------------------------------------------
+(B[mupdating acme.sh client...
+[1;32;40m-----------------------------------------------------
+(B[mCloning into 'acme.sh'...
+[Thu Feb  6 21:23:00 EST 2025] Installing to /root/.acme.sh
+[Thu Feb  6 21:23:00 EST 2025] Installed to /root/.acme.sh/acme.sh
+[Thu Feb  6 21:23:00 EST 2025] Installing alias to '/root/.bashrc'
+[Thu Feb  6 21:23:00 EST 2025] Close and reopen your terminal to start using acme.sh
+[Thu Feb  6 21:23:00 EST 2025] Installing alias to '/root/.cshrc'
+[Thu Feb  6 21:23:00 EST 2025] Installing alias to '/root/.tcshrc'
+[Thu Feb  6 21:23:00 EST 2025] Installing cron job
+24 16 * * * "/root/.acme.sh"/acme.sh --cron --home "/root/.acme.sh" > /dev/null
+[Thu Feb  6 21:23:00 EST 2025] bash has been found. Changing the shebang to use bash as preferred.
+[Thu Feb  6 21:23:02 EST 2025] OK
+https://github.com/acmesh-official/acme.sh
+v3.1.0
+[1;32;40m-----------------------------------------------------
+(B[mset default acme.sh CA to letsencrypt:
+acme.sh --set-default-ca --server letsencrypt
+[Thu Feb  6 21:23:02 EST 2025] Changed default CA to: https://acme-v02.api.letsencrypt.org/directory
+[1;32;40m-----------------------------------------------------
+(B[macme.sh updated
+[1;32;40m-----------------------------------------------------
+(B[mgrep 'root' /usr/local/nginx/conf/conf.d/go2uk.net.ssl.conf
+  root /home/nginx/domains/go2uk.net/public;
+
+-----------------------------------------------------------
+issue & install letsencrypt ssl certificate for go2uk.net
+-----------------------------------------------------------
+testcert value = live
+/root/.acme.sh/acme.sh --issue -d go2uk.net -d www.go2uk.net --days 60 --pre-hook "/usr/local/src/centminmod/tools/pre-acme-hooks.sh all-check go2uk.net" -w /home/nginx/domains/go2uk.net/public -k "2048" --useragent "centminmod-centos8-acmesh-webroot" --log /root/centminlogs/acmetool.sh-debug-log-060225-212257.log --log-level 2 --preferred-chain "ISRG"
+[Thu Feb  6 21:23:04 EST 2025] Using CA: https://acme-v02.api.letsencrypt.org/directory
+[Thu Feb  6 21:23:04 EST 2025] Runing pre hook:'/usr/local/src/centminmod/tools/pre-acme-hooks.sh all-check go2uk.net'
+Nginx root path: /home/nginx/domains/go2uk.net/public
+Le_Webroot: /home/nginx/domains/go2uk.net/public
+The root paths match. Proceeding with the acme.sh operation.
+[Thu Feb  6 21:23:04 EST 2025] Multi domain='DNS:go2uk.net,DNS:www.go2uk.net'
+[Thu Feb  6 21:23:06 EST 2025] Getting webroot for domain='go2uk.net'
+[Thu Feb  6 21:23:06 EST 2025] Getting webroot for domain='www.go2uk.net'
+[Thu Feb  6 21:23:06 EST 2025] Verifying: go2uk.net
+[Thu Feb  6 21:23:07 EST 2025] Pending. The CA is processing your order, please wait. (1/30)
+[Thu Feb  6 21:23:10 EST 2025] go2uk.net: Invalid status. Verification error details: 204.13.154.36: Invalid response from http://go2uk.net/.well-known/acme-challenge/ngEE9I3catV0RPHLN6nayfLH8GD654Xj5ZOnYQQQbsc: 404
+[Thu Feb  6 21:23:10 EST 2025] Please check log file for more details: /root/centminlogs/acmetool.sh-debug-log-060225-212257.log
+LECHECK = 1
+
+log files saved at /root/centminlogs
+-rw-r--r-- 1 root root  45K Feb  6 21:23 acmetool.sh-debug-log-060225-212257.log
+-rw-r--r-- 1 root root 3.1K Feb  6 21:23 acmesh-issue_060225-212257.log
+
+

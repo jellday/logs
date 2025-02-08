@@ -1,0 +1,607 @@
+[Thu Feb  6 20:51:31 EST 2025] Let's find the script directory.
+[Thu Feb  6 20:51:31 EST 2025] _SCRIPT_='/root/.acme.sh/acme.sh'
+[Thu Feb  6 20:51:31 EST 2025] _script='/root/.acme.sh/acme.sh'
+[Thu Feb  6 20:51:31 EST 2025] _script_home='/root/.acme.sh'
+[Thu Feb  6 20:51:31 EST 2025] Using config home: /root/.acme.sh
+[Thu Feb  6 20:51:31 EST 2025] LE_WORKING_DIR='/root/.acme.sh'
+[Thu Feb  6 20:51:31 EST 2025] Running cmd: issue
+[Thu Feb  6 20:51:31 EST 2025] _main_domain='go2uk.net'
+[Thu Feb  6 20:51:31 EST 2025] _alt_domains='www.go2uk.net'
+[Thu Feb  6 20:51:31 EST 2025] Using config home: /root/.acme.sh
+[Thu Feb  6 20:51:32 EST 2025] default_acme_server='https://acme-v02.api.letsencrypt.org/directory'
+[Thu Feb  6 20:51:32 EST 2025] ACME_DIRECTORY='https://acme-v02.api.letsencrypt.org/directory'
+[Thu Feb  6 20:51:32 EST 2025] _ACME_SERVER_HOST='acme-v02.api.letsencrypt.org'
+[Thu Feb  6 20:51:32 EST 2025] _ACME_SERVER_PATH='directory'
+[Thu Feb  6 20:51:32 EST 2025] DOMAIN_PATH='/root/.acme.sh/go2uk.net'
+[Thu Feb  6 20:51:32 EST 2025] '/home/nginx/domains/go2uk.net/public' does not contain 'dns'
+[Thu Feb  6 20:51:32 EST 2025] Using ACME_DIRECTORY: https://acme-v02.api.letsencrypt.org/directory
+[Thu Feb  6 20:51:32 EST 2025] _init API for server: https://acme-v02.api.letsencrypt.org/directory
+[Thu Feb  6 20:51:32 EST 2025] GET
+[Thu Feb  6 20:51:32 EST 2025] url='https://acme-v02.api.letsencrypt.org/directory'
+[Thu Feb  6 20:51:32 EST 2025] timeout=
+[Thu Feb  6 20:51:32 EST 2025] _CURL='curl --silent --dump-header /root/.acme.sh/http.header  -L  -g '
+[Thu Feb  6 20:51:32 EST 2025] ret='0'
+[Thu Feb  6 20:51:32 EST 2025] response='{
+  "92DJC2JIMDQ": "https://community.letsencrypt.org/t/adding-random-entries-to-the-directory/33417",
+  "keyChange": "https://acme-v02.api.letsencrypt.org/acme/key-change",
+  "meta": {
+    "caaIdentities": [
+      "letsencrypt.org"
+    ],
+    "profiles": {
+      "classic": "The same profile you're accustomed to"
+    },
+    "termsOfService": "https://letsencrypt.org/documents/LE-SA-v1.4-April-3-2024.pdf",
+    "website": "https://letsencrypt.org"
+  },
+  "newAccount": "https://acme-v02.api.letsencrypt.org/acme/new-acct",
+  "newNonce": "https://acme-v02.api.letsencrypt.org/acme/new-nonce",
+  "newOrder": "https://acme-v02.api.letsencrypt.org/acme/new-order",
+  "renewalInfo": "https://acme-v02.api.letsencrypt.org/draft-ietf-acme-ari-03/renewalInfo",
+  "revokeCert": "https://acme-v02.api.letsencrypt.org/acme/revoke-cert"
+}'
+[Thu Feb  6 20:51:32 EST 2025] ACME_KEY_CHANGE='https://acme-v02.api.letsencrypt.org/acme/key-change'
+[Thu Feb  6 20:51:32 EST 2025] ACME_NEW_AUTHZ
+[Thu Feb  6 20:51:32 EST 2025] ACME_NEW_ORDER='https://acme-v02.api.letsencrypt.org/acme/new-order'
+[Thu Feb  6 20:51:32 EST 2025] ACME_NEW_ACCOUNT='https://acme-v02.api.letsencrypt.org/acme/new-acct'
+[Thu Feb  6 20:51:32 EST 2025] ACME_REVOKE_CERT='https://acme-v02.api.letsencrypt.org/acme/revoke-cert'
+[Thu Feb  6 20:51:32 EST 2025] ACME_AGREEMENT='https://letsencrypt.org/documents/LE-SA-v1.4-April-3-2024.pdf'
+[Thu Feb  6 20:51:32 EST 2025] ACME_NEW_NONCE='https://acme-v02.api.letsencrypt.org/acme/new-nonce'
+[Thu Feb  6 20:51:32 EST 2025] Using CA: https://acme-v02.api.letsencrypt.org/directory
+[Thu Feb  6 20:51:32 EST 2025] _on_before_issue
+[Thu Feb  6 20:51:32 EST 2025] _chk_main_domain='go2uk.net'
+[Thu Feb  6 20:51:32 EST 2025] _chk_alt_domains='www.go2uk.net'
+[Thu Feb  6 20:51:32 EST 2025] Runing pre hook:'/usr/local/src/centminmod/tools/pre-acme-hooks.sh all-check go2uk.net'
+[Thu Feb  6 20:51:32 EST 2025] '/home/nginx/domains/go2uk.net/public' does not contain 'no'
+[Thu Feb  6 20:51:32 EST 2025] Le_LocalAddress
+[Thu Feb  6 20:51:32 EST 2025] d='go2uk.net'
+[Thu Feb  6 20:51:32 EST 2025] Checking for domain='go2uk.net'
+[Thu Feb  6 20:51:32 EST 2025] _currentRoot='/home/nginx/domains/go2uk.net/public'
+[Thu Feb  6 20:51:32 EST 2025] d='www.go2uk.net'
+[Thu Feb  6 20:51:32 EST 2025] Checking for domain='www.go2uk.net'
+[Thu Feb  6 20:51:32 EST 2025] _currentRoot='/home/nginx/domains/go2uk.net/public'
+[Thu Feb  6 20:51:32 EST 2025] d
+[Thu Feb  6 20:51:32 EST 2025] '/home/nginx/domains/go2uk.net/public' does not contain 'apache'
+[Thu Feb  6 20:51:32 EST 2025] _saved_account_key_hash='j2GVG3c1aUw8MmCv4tOjDU2A1gz/uK7put3Lkp/b33U='
+[Thu Feb  6 20:51:32 EST 2025] _saved_account_key_hash was not changed, skipping account registration.
+[Thu Feb  6 20:51:32 EST 2025] Read key length: 2048
+[Thu Feb  6 20:51:32 EST 2025] Creating domain key
+[Thu Feb  6 20:51:32 EST 2025] Using config home: /root/.acme.sh
+[Thu Feb  6 20:51:32 EST 2025] ACME_DIRECTORY='https://acme-v02.api.letsencrypt.org/directory'
+[Thu Feb  6 20:51:32 EST 2025] _ACME_SERVER_HOST='acme-v02.api.letsencrypt.org'
+[Thu Feb  6 20:51:32 EST 2025] _ACME_SERVER_PATH='directory'
+[Thu Feb  6 20:51:32 EST 2025] _createkey for file:/root/.acme.sh/go2uk.net/go2uk.net.key
+[Thu Feb  6 20:51:32 EST 2025] Using length 2048
+[Thu Feb  6 20:51:32 EST 2025] Using RSA: 2048
+[Thu Feb  6 20:51:32 EST 2025] The domain key is here: /root/.acme.sh/go2uk.net/go2uk.net.key
+[Thu Feb  6 20:51:32 EST 2025] _createcsr
+[Thu Feb  6 20:51:32 EST 2025] domain='go2uk.net'
+[Thu Feb  6 20:51:32 EST 2025] domainlist='www.go2uk.net'
+[Thu Feb  6 20:51:32 EST 2025] csrkey='/root/.acme.sh/go2uk.net/go2uk.net.key'
+[Thu Feb  6 20:51:32 EST 2025] csr='/root/.acme.sh/go2uk.net/go2uk.net.csr'
+[Thu Feb  6 20:51:32 EST 2025] csrconf='/root/.acme.sh/go2uk.net/go2uk.net.csr.conf'
+[Thu Feb  6 20:51:32 EST 2025] _is_idn_d='www.go2uk.net'
+[Thu Feb  6 20:51:32 EST 2025] _idn_temp
+[Thu Feb  6 20:51:32 EST 2025] domainlist='www.go2uk.net'
+[Thu Feb  6 20:51:32 EST 2025] seg='go2uk'
+[Thu Feb  6 20:51:32 EST 2025] _is_idn_d='go2uk.net'
+[Thu Feb  6 20:51:32 EST 2025] _idn_temp
+[Thu Feb  6 20:51:32 EST 2025] seg='www'
+[Thu Feb  6 20:51:32 EST 2025] Multi domain='DNS:go2uk.net,DNS:www.go2uk.net'
+[Thu Feb  6 20:51:32 EST 2025] _is_idn_d='go2uk.net'
+[Thu Feb  6 20:51:32 EST 2025] _idn_temp
+[Thu Feb  6 20:51:32 EST 2025] _csr_cn='go2uk.net'
+[Thu Feb  6 20:51:32 EST 2025] seg='go2uk'
+[Thu Feb  6 20:51:33 EST 2025] Getting domain auth token for each domain
+[Thu Feb  6 20:51:33 EST 2025] seg='go2uk'
+[Thu Feb  6 20:51:33 EST 2025] _is_idn_d='go2uk.net'
+[Thu Feb  6 20:51:33 EST 2025] _idn_temp
+[Thu Feb  6 20:51:33 EST 2025] d='www.go2uk.net'
+[Thu Feb  6 20:51:33 EST 2025] seg='www'
+[Thu Feb  6 20:51:33 EST 2025] _is_idn_d='www.go2uk.net'
+[Thu Feb  6 20:51:33 EST 2025] _idn_temp
+[Thu Feb  6 20:51:33 EST 2025] d
+[Thu Feb  6 20:51:33 EST 2025] _identifiers='{"type":"dns","value":"go2uk.net"},{"type":"dns","value":"www.go2uk.net"}'
+[Thu Feb  6 20:51:33 EST 2025] _notBefore
+[Thu Feb  6 20:51:33 EST 2025] _notAfter
+[Thu Feb  6 20:51:33 EST 2025] STEP 1, Ordering a Certificate
+[Thu Feb  6 20:51:33 EST 2025] =======Sending Signed Request=======
+[Thu Feb  6 20:51:33 EST 2025] url='https://acme-v02.api.letsencrypt.org/acme/new-order'
+[Thu Feb  6 20:51:33 EST 2025] payload='{"identifiers": [{"type":"dns","value":"go2uk.net"},{"type":"dns","value":"www.go2uk.net"}]}'
+[Thu Feb  6 20:51:33 EST 2025] EC key
+[Thu Feb  6 20:51:33 EST 2025] _URGLY_PRINTF
+[Thu Feb  6 20:51:33 EST 2025] xargs
+[Thu Feb  6 20:51:33 EST 2025] _URGLY_PRINTF
+[Thu Feb  6 20:51:33 EST 2025] xargs
+[Thu Feb  6 20:51:33 EST 2025] Get nonce with HEAD. ACME_NEW_NONCE='https://acme-v02.api.letsencrypt.org/acme/new-nonce'
+[Thu Feb  6 20:51:33 EST 2025] HEAD
+[Thu Feb  6 20:51:33 EST 2025] _post_url='https://acme-v02.api.letsencrypt.org/acme/new-nonce'
+[Thu Feb  6 20:51:33 EST 2025] body
+[Thu Feb  6 20:51:33 EST 2025] _postContentType='application/jose+json'
+[Thu Feb  6 20:51:33 EST 2025] _CURL='curl --silent --dump-header /root/.acme.sh/http.header  -L  -g  -I  '
+[Thu Feb  6 20:51:33 EST 2025] _ret='0'
+[Thu Feb  6 20:51:33 EST 2025] _headers='HTTP/2 200 
+server: nginx
+date: Fri, 07 Feb 2025 01:52:32 GMT
+cache-control: public, max-age=0, no-cache
+link: <https://acme-v02.api.letsencrypt.org/directory>;rel="index"
+replay-nonce: ES_SC8yEPzJNfuW2ey6qFjUlHAnnKHJ806jyItCIqZpnCiA2rZI
+x-frame-options: DENY
+strict-transport-security: max-age=604800
+'
+[Thu Feb  6 20:51:33 EST 2025] nonce='ES_SC8yEPzJNfuW2ey6qFjUlHAnnKHJ806jyItCIqZpnCiA2rZI'
+[Thu Feb  6 20:51:33 EST 2025] _URGLY_PRINTF
+[Thu Feb  6 20:51:33 EST 2025] xargs
+[Thu Feb  6 20:51:33 EST 2025] POST
+[Thu Feb  6 20:51:33 EST 2025] _post_url='https://acme-v02.api.letsencrypt.org/acme/new-order'
+[Thu Feb  6 20:51:33 EST 2025] body='{"protected": "eyJub25jZSI6ICJFU19TQzh5RVB6Sk5mdVcyZXk2cUZqVWxIQW5uS0hKODA2anlJdENJcVpwbkNpQTJyWkkiLCAidXJsIjogImh0dHBzOi8vYWNtZS12MDIuYXBpLmxldHNlbmNyeXB0Lm9yZy9hY21lL25ldy1vcmRlciIsICJhbGciOiAiRVMyNTYiLCAia2lkIjogImh0dHBzOi8vYWNtZS12MDIuYXBpLmxldHNlbmNyeXB0Lm9yZy9hY21lL2FjY3QvMjEzMTY3NTQ3NSJ9", "payload": "eyJpZGVudGlmaWVycyI6IFt7InR5cGUiOiJkbnMiLCJ2YWx1ZSI6ImdvMnVrLm5ldCJ9LHsidHlwZSI6ImRucyIsInZhbHVlIjoid3d3LmdvMnVrLm5ldCJ9XX0", "signature": "CORBPiwqkzp8jbFjCUGhiP6KhE2NUw0m64TIj1X2AD0JXZniko7e4X8Qn5AKukEvFzox40D3wHbADZCF0COl2Q"}'
+[Thu Feb  6 20:51:33 EST 2025] _postContentType='application/jose+json'
+[Thu Feb  6 20:51:33 EST 2025] Http already initialized.
+[Thu Feb  6 20:51:33 EST 2025] _CURL='curl --silent --dump-header /root/.acme.sh/http.header  -L  -g '
+[Thu Feb  6 20:51:34 EST 2025] _ret='0'
+[Thu Feb  6 20:51:34 EST 2025] responseHeaders='HTTP/2 201 
+server: nginx
+date: Fri, 07 Feb 2025 01:52:32 GMT
+content-type: application/json
+content-length: 487
+boulder-requester: 2131675475
+cache-control: public, max-age=0, no-cache
+link: <https://acme-v02.api.letsencrypt.org/directory>;rel="index"
+location: https://acme-v02.api.letsencrypt.org/acme/order/2131675475/351924181465
+replay-nonce: VsUfN5awOXfu2njo3uo5gfoRYdiEmTYI-6KAsQVpOEl8jDeLW6U
+x-frame-options: DENY
+strict-transport-security: max-age=604800
+'
+[Thu Feb  6 20:51:34 EST 2025] code='201'
+[Thu Feb  6 20:51:34 EST 2025] original='{
+  "status": "pending",
+  "expires": "2025-02-14T01:52:32Z",
+  "identifiers": [
+    {
+      "type": "dns",
+      "value": "go2uk.net"
+    },
+    {
+      "type": "dns",
+      "value": "www.go2uk.net"
+    }
+  ],
+  "authorizations": [
+    "https://acme-v02.api.letsencrypt.org/acme/authz/2131675475/472165423495",
+    "https://acme-v02.api.letsencrypt.org/acme/authz/2131675475/472165423505"
+  ],
+  "finalize": "https://acme-v02.api.letsencrypt.org/acme/finalize/2131675475/351924181465"
+}'
+[Thu Feb  6 20:51:34 EST 2025] response='{"status":"pending","expires":"2025-02-14T01:52:32Z","identifiers":[{"type":"dns","value":"go2uk.net"},{"type":"dns","value":"www.go2uk.net"}],"authorizations":["https://acme-v02.api.letsencrypt.org/acme/authz/2131675475/472165423495","https://acme-v02.api.letsencrypt.org/acme/authz/2131675475/472165423505"],"finalize":"https://acme-v02.api.letsencrypt.org/acme/finalize/2131675475/351924181465"}'
+[Thu Feb  6 20:51:34 EST 2025] Le_LinkOrder='https://acme-v02.api.letsencrypt.org/acme/order/2131675475/351924181465'
+[Thu Feb  6 20:51:34 EST 2025] Le_OrderFinalize='https://acme-v02.api.letsencrypt.org/acme/finalize/2131675475/351924181465'
+[Thu Feb  6 20:51:34 EST 2025] _authorizations_seg='https://acme-v02.api.letsencrypt.org/acme/authz/2131675475/472165423495,https://acme-v02.api.letsencrypt.org/acme/authz/2131675475/472165423505'
+[Thu Feb  6 20:51:34 EST 2025] STEP 2, Get the authorizations of each domain
+[Thu Feb  6 20:51:34 EST 2025] _authz_url='https://acme-v02.api.letsencrypt.org/acme/authz/2131675475/472165423495'
+[Thu Feb  6 20:51:34 EST 2025] =======Sending Signed Request=======
+[Thu Feb  6 20:51:34 EST 2025] url='https://acme-v02.api.letsencrypt.org/acme/authz/2131675475/472165423495'
+[Thu Feb  6 20:51:34 EST 2025] payload
+[Thu Feb  6 20:51:34 EST 2025] Use cached jwk for file: /root/.acme.sh/ca/acme-v02.api.letsencrypt.org/directory/account.key
+[Thu Feb  6 20:51:34 EST 2025] Use _CACHED_NONCE='VsUfN5awOXfu2njo3uo5gfoRYdiEmTYI-6KAsQVpOEl8jDeLW6U'
+[Thu Feb  6 20:51:34 EST 2025] nonce='VsUfN5awOXfu2njo3uo5gfoRYdiEmTYI-6KAsQVpOEl8jDeLW6U'
+[Thu Feb  6 20:51:34 EST 2025] _URGLY_PRINTF
+[Thu Feb  6 20:51:34 EST 2025] xargs
+[Thu Feb  6 20:51:34 EST 2025] POST
+[Thu Feb  6 20:51:34 EST 2025] _post_url='https://acme-v02.api.letsencrypt.org/acme/authz/2131675475/472165423495'
+[Thu Feb  6 20:51:34 EST 2025] body='{"protected": "eyJub25jZSI6ICJWc1VmTjVhd09YZnUybmpvM3VvNWdmb1JZZGlFbVRZSS02S0FzUVZwT0VsOGpEZUxXNlUiLCAidXJsIjogImh0dHBzOi8vYWNtZS12MDIuYXBpLmxldHNlbmNyeXB0Lm9yZy9hY21lL2F1dGh6LzIxMzE2NzU0NzUvNDcyMTY1NDIzNDk1IiwgImFsZyI6ICJFUzI1NiIsICJraWQiOiAiaHR0cHM6Ly9hY21lLXYwMi5hcGkubGV0c2VuY3J5cHQub3JnL2FjbWUvYWNjdC8yMTMxNjc1NDc1In0", "payload": "", "signature": "M7PNeUleMZQu9nl22n26bIkhVSEEWoR9w2iw4xLn_ynP5bEYm5XKAynQw1NZu5icMgipC8fBQvsjXpqgRSNRSA"}'
+[Thu Feb  6 20:51:34 EST 2025] _postContentType='application/jose+json'
+[Thu Feb  6 20:51:34 EST 2025] Http already initialized.
+[Thu Feb  6 20:51:34 EST 2025] _CURL='curl --silent --dump-header /root/.acme.sh/http.header  -L  -g '
+[Thu Feb  6 20:51:34 EST 2025] _ret='0'
+[Thu Feb  6 20:51:34 EST 2025] responseHeaders='HTTP/2 200 
+server: nginx
+date: Fri, 07 Feb 2025 01:52:33 GMT
+content-type: application/json
+content-length: 817
+boulder-requester: 2131675475
+cache-control: public, max-age=0, no-cache
+link: <https://acme-v02.api.letsencrypt.org/directory>;rel="index"
+replay-nonce: A-S0uJjSIHXZNQmFkzD4YzoKPszGRsG80NK67s1WKOe4w3-EMBQ
+x-frame-options: DENY
+strict-transport-security: max-age=604800
+'
+[Thu Feb  6 20:51:34 EST 2025] code='200'
+[Thu Feb  6 20:51:34 EST 2025] original='{
+  "identifier": {
+    "type": "dns",
+    "value": "go2uk.net"
+  },
+  "status": "pending",
+  "expires": "2025-02-14T01:52:32Z",
+  "challenges": [
+    {
+      "type": "dns-01",
+      "url": "https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423495/oCaqOg",
+      "status": "pending",
+      "token": "Fip62urwyHDrNvoMQNXoI-sWWz5RBtEpqlp7847ToAc"
+    },
+    {
+      "type": "http-01",
+      "url": "https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423495/qbI0Fw",
+      "status": "pending",
+      "token": "Fip62urwyHDrNvoMQNXoI-sWWz5RBtEpqlp7847ToAc"
+    },
+    {
+      "type": "tls-alpn-01",
+      "url": "https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423495/81blUQ",
+      "status": "pending",
+      "token": "Fip62urwyHDrNvoMQNXoI-sWWz5RBtEpqlp7847ToAc"
+    }
+  ]
+}'
+[Thu Feb  6 20:51:34 EST 2025] response='{"identifier":{"type":"dns","value":"go2uk.net"},"status":"pending","expires":"2025-02-14T01:52:32Z","challenges":[{"type":"dns-01","url":"https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423495/oCaqOg","status":"pending","token":"Fip62urwyHDrNvoMQNXoI-sWWz5RBtEpqlp7847ToAc"},{"type":"http-01","url":"https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423495/qbI0Fw","status":"pending","token":"Fip62urwyHDrNvoMQNXoI-sWWz5RBtEpqlp7847ToAc"},{"type":"tls-alpn-01","url":"https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423495/81blUQ","status":"pending","token":"Fip62urwyHDrNvoMQNXoI-sWWz5RBtEpqlp7847ToAc"}]}'
+[Thu Feb  6 20:51:34 EST 2025] response='{"identifier":{"type":"dns","value":"go2uk.net"},"status":"pending","expires":"2025-02-14T01:52:32Z","challenges":[{"type":"dns-01","url":"https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423495/oCaqOg","status":"pending","token":"Fip62urwyHDrNvoMQNXoI-sWWz5RBtEpqlp7847ToAc"},{"type":"http-01","url":"https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423495/qbI0Fw","status":"pending","token":"Fip62urwyHDrNvoMQNXoI-sWWz5RBtEpqlp7847ToAc"},{"type":"tls-alpn-01","url":"https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423495/81blUQ","status":"pending","token":"Fip62urwyHDrNvoMQNXoI-sWWz5RBtEpqlp7847ToAc"}]}'
+[Thu Feb  6 20:51:34 EST 2025] _d='go2uk.net'
+[Thu Feb  6 20:51:34 EST 2025] _authz_url='https://acme-v02.api.letsencrypt.org/acme/authz/2131675475/472165423505'
+[Thu Feb  6 20:51:34 EST 2025] =======Sending Signed Request=======
+[Thu Feb  6 20:51:34 EST 2025] url='https://acme-v02.api.letsencrypt.org/acme/authz/2131675475/472165423505'
+[Thu Feb  6 20:51:34 EST 2025] payload
+[Thu Feb  6 20:51:34 EST 2025] Use cached jwk for file: /root/.acme.sh/ca/acme-v02.api.letsencrypt.org/directory/account.key
+[Thu Feb  6 20:51:34 EST 2025] Use _CACHED_NONCE='A-S0uJjSIHXZNQmFkzD4YzoKPszGRsG80NK67s1WKOe4w3-EMBQ'
+[Thu Feb  6 20:51:34 EST 2025] nonce='A-S0uJjSIHXZNQmFkzD4YzoKPszGRsG80NK67s1WKOe4w3-EMBQ'
+[Thu Feb  6 20:51:34 EST 2025] _URGLY_PRINTF
+[Thu Feb  6 20:51:34 EST 2025] xargs
+[Thu Feb  6 20:51:34 EST 2025] POST
+[Thu Feb  6 20:51:34 EST 2025] _post_url='https://acme-v02.api.letsencrypt.org/acme/authz/2131675475/472165423505'
+[Thu Feb  6 20:51:34 EST 2025] body='{"protected": "eyJub25jZSI6ICJBLVMwdUpqU0lIWFpOUW1Ga3pENFl6b0tQc3pHUnNHODBOSzY3czFXS09lNHczLUVNQlEiLCAidXJsIjogImh0dHBzOi8vYWNtZS12MDIuYXBpLmxldHNlbmNyeXB0Lm9yZy9hY21lL2F1dGh6LzIxMzE2NzU0NzUvNDcyMTY1NDIzNTA1IiwgImFsZyI6ICJFUzI1NiIsICJraWQiOiAiaHR0cHM6Ly9hY21lLXYwMi5hcGkubGV0c2VuY3J5cHQub3JnL2FjbWUvYWNjdC8yMTMxNjc1NDc1In0", "payload": "", "signature": "u7p8x5axNSO4waV2SnnhVPxQWbDFFISTgH7_H2qTLj4uuOMRccyCSHHQSZH8SbIPD1IWiKI3DhxTOPjQ5gu9LA"}'
+[Thu Feb  6 20:51:34 EST 2025] _postContentType='application/jose+json'
+[Thu Feb  6 20:51:34 EST 2025] Http already initialized.
+[Thu Feb  6 20:51:34 EST 2025] _CURL='curl --silent --dump-header /root/.acme.sh/http.header  -L  -g '
+[Thu Feb  6 20:51:35 EST 2025] _ret='0'
+[Thu Feb  6 20:51:35 EST 2025] responseHeaders='HTTP/2 200 
+server: nginx
+date: Fri, 07 Feb 2025 01:52:33 GMT
+content-type: application/json
+content-length: 821
+boulder-requester: 2131675475
+cache-control: public, max-age=0, no-cache
+link: <https://acme-v02.api.letsencrypt.org/directory>;rel="index"
+replay-nonce: A-S0uJjSqlITlwe3hIqP8cwZb9fFNrOWwJnQ01m4-rNgN2cThNQ
+x-frame-options: DENY
+strict-transport-security: max-age=604800
+'
+[Thu Feb  6 20:51:35 EST 2025] code='200'
+[Thu Feb  6 20:51:35 EST 2025] original='{
+  "identifier": {
+    "type": "dns",
+    "value": "www.go2uk.net"
+  },
+  "status": "pending",
+  "expires": "2025-02-14T01:52:32Z",
+  "challenges": [
+    {
+      "type": "http-01",
+      "url": "https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423505/lOe38g",
+      "status": "pending",
+      "token": "6u7Tr6U4pBKk6Rk6PeOdmbVnCAhV48aiIjkB0th4_sk"
+    },
+    {
+      "type": "tls-alpn-01",
+      "url": "https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423505/qVkpYQ",
+      "status": "pending",
+      "token": "6u7Tr6U4pBKk6Rk6PeOdmbVnCAhV48aiIjkB0th4_sk"
+    },
+    {
+      "type": "dns-01",
+      "url": "https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423505/kIWA2w",
+      "status": "pending",
+      "token": "6u7Tr6U4pBKk6Rk6PeOdmbVnCAhV48aiIjkB0th4_sk"
+    }
+  ]
+}'
+[Thu Feb  6 20:51:35 EST 2025] response='{"identifier":{"type":"dns","value":"www.go2uk.net"},"status":"pending","expires":"2025-02-14T01:52:32Z","challenges":[{"type":"http-01","url":"https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423505/lOe38g","status":"pending","token":"6u7Tr6U4pBKk6Rk6PeOdmbVnCAhV48aiIjkB0th4_sk"},{"type":"tls-alpn-01","url":"https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423505/qVkpYQ","status":"pending","token":"6u7Tr6U4pBKk6Rk6PeOdmbVnCAhV48aiIjkB0th4_sk"},{"type":"dns-01","url":"https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423505/kIWA2w","status":"pending","token":"6u7Tr6U4pBKk6Rk6PeOdmbVnCAhV48aiIjkB0th4_sk"}]}'
+[Thu Feb  6 20:51:35 EST 2025] response='{"identifier":{"type":"dns","value":"www.go2uk.net"},"status":"pending","expires":"2025-02-14T01:52:32Z","challenges":[{"type":"http-01","url":"https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423505/lOe38g","status":"pending","token":"6u7Tr6U4pBKk6Rk6PeOdmbVnCAhV48aiIjkB0th4_sk"},{"type":"tls-alpn-01","url":"https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423505/qVkpYQ","status":"pending","token":"6u7Tr6U4pBKk6Rk6PeOdmbVnCAhV48aiIjkB0th4_sk"},{"type":"dns-01","url":"https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423505/kIWA2w","status":"pending","token":"6u7Tr6U4pBKk6Rk6PeOdmbVnCAhV48aiIjkB0th4_sk"}]}'
+[Thu Feb  6 20:51:35 EST 2025] _d='www.go2uk.net'
+[Thu Feb  6 20:51:35 EST 2025] _authorizations_map='www.go2uk.net,{"identifier":{"type":"dns","value":"www.go2uk.net"},"status":"pending","expires":"2025-02-14T01:52:32Z","challenges":[{"type":"http-01","url":"https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423505/lOe38g","status":"pending","token":"6u7Tr6U4pBKk6Rk6PeOdmbVnCAhV48aiIjkB0th4_sk"},{"type":"tls-alpn-01","url":"https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423505/qVkpYQ","status":"pending","token":"6u7Tr6U4pBKk6Rk6PeOdmbVnCAhV48aiIjkB0th4_sk"},{"type":"dns-01","url":"https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423505/kIWA2w","status":"pending","token":"6u7Tr6U4pBKk6Rk6PeOdmbVnCAhV48aiIjkB0th4_sk"}]}#https://acme-v02.api.letsencrypt.org/acme/authz/2131675475/472165423505
+go2uk.net,{"identifier":{"type":"dns","value":"go2uk.net"},"status":"pending","expires":"2025-02-14T01:52:32Z","challenges":[{"type":"dns-01","url":"https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423495/oCaqOg","status":"pending","token":"Fip62urwyHDrNvoMQNXoI-sWWz5RBtEpqlp7847ToAc"},{"type":"http-01","url":"https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423495/qbI0Fw","status":"pending","token":"Fip62urwyHDrNvoMQNXoI-sWWz5RBtEpqlp7847ToAc"},{"type":"tls-alpn-01","url":"https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423495/81blUQ","status":"pending","token":"Fip62urwyHDrNvoMQNXoI-sWWz5RBtEpqlp7847ToAc"}]}#https://acme-v02.api.letsencrypt.org/acme/authz/2131675475/472165423495
+'
+[Thu Feb  6 20:51:35 EST 2025] d='go2uk.net'
+[Thu Feb  6 20:51:35 EST 2025] Getting webroot for domain='go2uk.net'
+[Thu Feb  6 20:51:35 EST 2025] _w='/home/nginx/domains/go2uk.net/public'
+[Thu Feb  6 20:51:35 EST 2025] _currentRoot='/home/nginx/domains/go2uk.net/public'
+[Thu Feb  6 20:51:35 EST 2025] _is_idn_d='go2uk.net'
+[Thu Feb  6 20:51:35 EST 2025] _idn_temp
+[Thu Feb  6 20:51:35 EST 2025] _candidates='go2uk.net,{"identifier":{"type":"dns","value":"go2uk.net"},"status":"pending","expires":"2025-02-14T01:52:32Z","challenges":[{"type":"dns-01","url":"https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423495/oCaqOg","status":"pending","token":"Fip62urwyHDrNvoMQNXoI-sWWz5RBtEpqlp7847ToAc"},{"type":"http-01","url":"https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423495/qbI0Fw","status":"pending","token":"Fip62urwyHDrNvoMQNXoI-sWWz5RBtEpqlp7847ToAc"},{"type":"tls-alpn-01","url":"https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423495/81blUQ","status":"pending","token":"Fip62urwyHDrNvoMQNXoI-sWWz5RBtEpqlp7847ToAc"}]}#https://acme-v02.api.letsencrypt.org/acme/authz/2131675475/472165423495'
+[Thu Feb  6 20:51:35 EST 2025] response='{"identifier":{"type":"dns","value":"go2uk.net"},"status":"pending","expires":"2025-02-14T01:52:32Z","challenges":[{"type":"dns-01","url":"https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423495/oCaqOg","status":"pending","token":"Fip62urwyHDrNvoMQNXoI-sWWz5RBtEpqlp7847ToAc"},{"type":"http-01","url":"https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423495/qbI0Fw","status":"pending","token":"Fip62urwyHDrNvoMQNXoI-sWWz5RBtEpqlp7847ToAc"},{"type":"tls-alpn-01","url":"https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423495/81blUQ","status":"pending","token":"Fip62urwyHDrNvoMQNXoI-sWWz5RBtEpqlp7847ToAc"}]}#https://acme-v02.api.letsencrypt.org/acme/authz/2131675475/472165423495'
+[Thu Feb  6 20:51:35 EST 2025] _authz_url='https://acme-v02.api.letsencrypt.org/acme/authz/2131675475/472165423495'
+[Thu Feb  6 20:51:35 EST 2025] entry='"type":"http-01","url":"https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423495/qbI0Fw","status":"pending","token":"Fip62urwyHDrNvoMQNXoI-sWWz5RBtEpqlp7847ToAc"'
+[Thu Feb  6 20:51:35 EST 2025] token='Fip62urwyHDrNvoMQNXoI-sWWz5RBtEpqlp7847ToAc'
+[Thu Feb  6 20:51:35 EST 2025] uri='https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423495/qbI0Fw'
+[Thu Feb  6 20:51:35 EST 2025] keyauthorization='Fip62urwyHDrNvoMQNXoI-sWWz5RBtEpqlp7847ToAc.FQKA3D4I-bkis0mONPApGAQuW-dswTlHpijAmtXu6z0'
+[Thu Feb  6 20:51:35 EST 2025] dvlist='go2uk.net#Fip62urwyHDrNvoMQNXoI-sWWz5RBtEpqlp7847ToAc.FQKA3D4I-bkis0mONPApGAQuW-dswTlHpijAmtXu6z0#https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423495/qbI0Fw#http-01#/home/nginx/domains/go2uk.net/public#https://acme-v02.api.letsencrypt.org/acme/authz/2131675475/472165423495'
+[Thu Feb  6 20:51:35 EST 2025] d='www.go2uk.net'
+[Thu Feb  6 20:51:35 EST 2025] Getting webroot for domain='www.go2uk.net'
+[Thu Feb  6 20:51:35 EST 2025] _w='/home/nginx/domains/go2uk.net/public'
+[Thu Feb  6 20:51:35 EST 2025] _currentRoot='/home/nginx/domains/go2uk.net/public'
+[Thu Feb  6 20:51:35 EST 2025] _is_idn_d='www.go2uk.net'
+[Thu Feb  6 20:51:35 EST 2025] _idn_temp
+[Thu Feb  6 20:51:35 EST 2025] _candidates='www.go2uk.net,{"identifier":{"type":"dns","value":"www.go2uk.net"},"status":"pending","expires":"2025-02-14T01:52:32Z","challenges":[{"type":"http-01","url":"https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423505/lOe38g","status":"pending","token":"6u7Tr6U4pBKk6Rk6PeOdmbVnCAhV48aiIjkB0th4_sk"},{"type":"tls-alpn-01","url":"https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423505/qVkpYQ","status":"pending","token":"6u7Tr6U4pBKk6Rk6PeOdmbVnCAhV48aiIjkB0th4_sk"},{"type":"dns-01","url":"https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423505/kIWA2w","status":"pending","token":"6u7Tr6U4pBKk6Rk6PeOdmbVnCAhV48aiIjkB0th4_sk"}]}#https://acme-v02.api.letsencrypt.org/acme/authz/2131675475/472165423505'
+[Thu Feb  6 20:51:35 EST 2025] response='{"identifier":{"type":"dns","value":"www.go2uk.net"},"status":"pending","expires":"2025-02-14T01:52:32Z","challenges":[{"type":"http-01","url":"https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423505/lOe38g","status":"pending","token":"6u7Tr6U4pBKk6Rk6PeOdmbVnCAhV48aiIjkB0th4_sk"},{"type":"tls-alpn-01","url":"https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423505/qVkpYQ","status":"pending","token":"6u7Tr6U4pBKk6Rk6PeOdmbVnCAhV48aiIjkB0th4_sk"},{"type":"dns-01","url":"https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423505/kIWA2w","status":"pending","token":"6u7Tr6U4pBKk6Rk6PeOdmbVnCAhV48aiIjkB0th4_sk"}]}#https://acme-v02.api.letsencrypt.org/acme/authz/2131675475/472165423505'
+[Thu Feb  6 20:51:35 EST 2025] _authz_url='https://acme-v02.api.letsencrypt.org/acme/authz/2131675475/472165423505'
+[Thu Feb  6 20:51:35 EST 2025] entry='"type":"http-01","url":"https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423505/lOe38g","status":"pending","token":"6u7Tr6U4pBKk6Rk6PeOdmbVnCAhV48aiIjkB0th4_sk"'
+[Thu Feb  6 20:51:35 EST 2025] token='6u7Tr6U4pBKk6Rk6PeOdmbVnCAhV48aiIjkB0th4_sk'
+[Thu Feb  6 20:51:35 EST 2025] uri='https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423505/lOe38g'
+[Thu Feb  6 20:51:35 EST 2025] keyauthorization='6u7Tr6U4pBKk6Rk6PeOdmbVnCAhV48aiIjkB0th4_sk.FQKA3D4I-bkis0mONPApGAQuW-dswTlHpijAmtXu6z0'
+[Thu Feb  6 20:51:35 EST 2025] dvlist='www.go2uk.net#6u7Tr6U4pBKk6Rk6PeOdmbVnCAhV48aiIjkB0th4_sk.FQKA3D4I-bkis0mONPApGAQuW-dswTlHpijAmtXu6z0#https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423505/lOe38g#http-01#/home/nginx/domains/go2uk.net/public#https://acme-v02.api.letsencrypt.org/acme/authz/2131675475/472165423505'
+[Thu Feb  6 20:51:35 EST 2025] d
+[Thu Feb  6 20:51:35 EST 2025] vlist='go2uk.net#Fip62urwyHDrNvoMQNXoI-sWWz5RBtEpqlp7847ToAc.FQKA3D4I-bkis0mONPApGAQuW-dswTlHpijAmtXu6z0#https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423495/qbI0Fw#http-01#/home/nginx/domains/go2uk.net/public#https://acme-v02.api.letsencrypt.org/acme/authz/2131675475/472165423495,www.go2uk.net#6u7Tr6U4pBKk6Rk6PeOdmbVnCAhV48aiIjkB0th4_sk.FQKA3D4I-bkis0mONPApGAQuW-dswTlHpijAmtXu6z0#https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423505/lOe38g#http-01#/home/nginx/domains/go2uk.net/public#https://acme-v02.api.letsencrypt.org/acme/authz/2131675475/472165423505,'
+[Thu Feb  6 20:51:35 EST 2025] d='go2uk.net'
+[Thu Feb  6 20:51:35 EST 2025] d='www.go2uk.net'
+[Thu Feb  6 20:51:35 EST 2025] OK, let's start verification
+[Thu Feb  6 20:51:35 EST 2025] Verifying: go2uk.net
+[Thu Feb  6 20:51:35 EST 2025] d='go2uk.net'
+[Thu Feb  6 20:51:35 EST 2025] keyauthorization='Fip62urwyHDrNvoMQNXoI-sWWz5RBtEpqlp7847ToAc.FQKA3D4I-bkis0mONPApGAQuW-dswTlHpijAmtXu6z0'
+[Thu Feb  6 20:51:35 EST 2025] uri='https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423495/qbI0Fw'
+[Thu Feb  6 20:51:35 EST 2025] _authz_url='https://acme-v02.api.letsencrypt.org/acme/authz/2131675475/472165423495'
+[Thu Feb  6 20:51:35 EST 2025] _currentRoot='/home/nginx/domains/go2uk.net/public'
+[Thu Feb  6 20:51:35 EST 2025] wellknown_path='/home/nginx/domains/go2uk.net/public/.well-known/acme-challenge'
+[Thu Feb  6 20:51:35 EST 2025] Writing token: Fip62urwyHDrNvoMQNXoI-sWWz5RBtEpqlp7847ToAc to /home/nginx/domains/go2uk.net/public/.well-known/acme-challenge/Fip62urwyHDrNvoMQNXoI-sWWz5RBtEpqlp7847ToAc
+[Thu Feb  6 20:51:35 EST 2025] Trigger domain validation.
+[Thu Feb  6 20:51:35 EST 2025] _t_url='https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423495/qbI0Fw'
+[Thu Feb  6 20:51:35 EST 2025] _t_key_authz='Fip62urwyHDrNvoMQNXoI-sWWz5RBtEpqlp7847ToAc.FQKA3D4I-bkis0mONPApGAQuW-dswTlHpijAmtXu6z0'
+[Thu Feb  6 20:51:35 EST 2025] _t_vtype='http-01'
+[Thu Feb  6 20:51:35 EST 2025] =======Sending Signed Request=======
+[Thu Feb  6 20:51:35 EST 2025] url='https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423495/qbI0Fw'
+[Thu Feb  6 20:51:35 EST 2025] payload='{}'
+[Thu Feb  6 20:51:35 EST 2025] Use cached jwk for file: /root/.acme.sh/ca/acme-v02.api.letsencrypt.org/directory/account.key
+[Thu Feb  6 20:51:35 EST 2025] Use _CACHED_NONCE='A-S0uJjSqlITlwe3hIqP8cwZb9fFNrOWwJnQ01m4-rNgN2cThNQ'
+[Thu Feb  6 20:51:35 EST 2025] nonce='A-S0uJjSqlITlwe3hIqP8cwZb9fFNrOWwJnQ01m4-rNgN2cThNQ'
+[Thu Feb  6 20:51:35 EST 2025] _URGLY_PRINTF
+[Thu Feb  6 20:51:35 EST 2025] xargs
+[Thu Feb  6 20:51:35 EST 2025] POST
+[Thu Feb  6 20:51:35 EST 2025] _post_url='https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423495/qbI0Fw'
+[Thu Feb  6 20:51:35 EST 2025] body='{"protected": "eyJub25jZSI6ICJBLVMwdUpqU3FsSVRsd2UzaElxUDhjd1piOWZGTnJPV3dKblEwMW00LXJOZ04yY1RoTlEiLCAidXJsIjogImh0dHBzOi8vYWNtZS12MDIuYXBpLmxldHNlbmNyeXB0Lm9yZy9hY21lL2NoYWxsLzIxMzE2NzU0NzUvNDcyMTY1NDIzNDk1L3FiSTBGdyIsICJhbGciOiAiRVMyNTYiLCAia2lkIjogImh0dHBzOi8vYWNtZS12MDIuYXBpLmxldHNlbmNyeXB0Lm9yZy9hY21lL2FjY3QvMjEzMTY3NTQ3NSJ9", "payload": "e30", "signature": "M7YQRnKmjqFiyovBLu-LGRpAbE0CGKAZ2_v2koBJvzVIOceprHsCDueubyI6-kl43mXzoVWuBpYEVOAmzvdjgg"}'
+[Thu Feb  6 20:51:35 EST 2025] _postContentType='application/jose+json'
+[Thu Feb  6 20:51:35 EST 2025] Http already initialized.
+[Thu Feb  6 20:51:35 EST 2025] _CURL='curl --silent --dump-header /root/.acme.sh/http.header  -L  -g '
+[Thu Feb  6 20:51:35 EST 2025] _ret='0'
+[Thu Feb  6 20:51:35 EST 2025] responseHeaders='HTTP/2 200 
+server: nginx
+date: Fri, 07 Feb 2025 01:52:34 GMT
+content-type: application/json
+content-length: 195
+boulder-requester: 2131675475
+cache-control: public, max-age=0, no-cache
+link: <https://acme-v02.api.letsencrypt.org/directory>;rel="index"
+link: <https://acme-v02.api.letsencrypt.org/acme/authz/2131675475/472165423495>;rel="up"
+location: https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423495/qbI0Fw
+replay-nonce: 4v_-BYbeuu7D_LGl0-63oJlG76f7OlsliiGKqTbWXyIHeBgMbHE
+x-frame-options: DENY
+strict-transport-security: max-age=604800
+'
+[Thu Feb  6 20:51:35 EST 2025] code='200'
+[Thu Feb  6 20:51:35 EST 2025] original='{
+  "type": "http-01",
+  "url": "https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423495/qbI0Fw",
+  "status": "pending",
+  "token": "Fip62urwyHDrNvoMQNXoI-sWWz5RBtEpqlp7847ToAc"
+}'
+[Thu Feb  6 20:51:35 EST 2025] response='{"type":"http-01","url":"https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423495/qbI0Fw","status":"pending","token":"Fip62urwyHDrNvoMQNXoI-sWWz5RBtEpqlp7847ToAc"}'
+[Thu Feb  6 20:51:35 EST 2025] Trigger validation code: 200
+[Thu Feb  6 20:51:35 EST 2025] Let's check the authz status
+[Thu Feb  6 20:51:35 EST 2025] original='{"type":"http-01","url":"https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423495/qbI0Fw","status":"pending","token":"Fip62urwyHDrNvoMQNXoI-sWWz5RBtEpqlp7847ToAc"}'
+[Thu Feb  6 20:51:35 EST 2025] response='{"type":"http-01","url":"https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423495/qbI0Fw","status":"pending","token":"Fip62urwyHDrNvoMQNXoI-sWWz5RBtEpqlp7847ToAc"}'
+[Thu Feb  6 20:51:35 EST 2025] status='pending'
+[Thu Feb  6 20:51:35 EST 2025] Pending. The CA is processing your order, please wait. (1/30)
+[Thu Feb  6 20:51:35 EST 2025] Sleep 2 seconds before verifying again
+[Thu Feb  6 20:51:37 EST 2025] Checking
+[Thu Feb  6 20:51:38 EST 2025] =======Sending Signed Request=======
+[Thu Feb  6 20:51:38 EST 2025] url='https://acme-v02.api.letsencrypt.org/acme/authz/2131675475/472165423495'
+[Thu Feb  6 20:51:38 EST 2025] payload
+[Thu Feb  6 20:51:38 EST 2025] Use cached jwk for file: /root/.acme.sh/ca/acme-v02.api.letsencrypt.org/directory/account.key
+[Thu Feb  6 20:51:38 EST 2025] Use _CACHED_NONCE='4v_-BYbeuu7D_LGl0-63oJlG76f7OlsliiGKqTbWXyIHeBgMbHE'
+[Thu Feb  6 20:51:38 EST 2025] nonce='4v_-BYbeuu7D_LGl0-63oJlG76f7OlsliiGKqTbWXyIHeBgMbHE'
+[Thu Feb  6 20:51:38 EST 2025] _URGLY_PRINTF
+[Thu Feb  6 20:51:38 EST 2025] xargs
+[Thu Feb  6 20:51:38 EST 2025] POST
+[Thu Feb  6 20:51:38 EST 2025] _post_url='https://acme-v02.api.letsencrypt.org/acme/authz/2131675475/472165423495'
+[Thu Feb  6 20:51:38 EST 2025] body='{"protected": "eyJub25jZSI6ICI0dl8tQlliZXV1N0RfTEdsMC02M29KbEc3NmY3T2xzbGlpR0txVGJXWHlJSGVCZ01iSEUiLCAidXJsIjogImh0dHBzOi8vYWNtZS12MDIuYXBpLmxldHNlbmNyeXB0Lm9yZy9hY21lL2F1dGh6LzIxMzE2NzU0NzUvNDcyMTY1NDIzNDk1IiwgImFsZyI6ICJFUzI1NiIsICJraWQiOiAiaHR0cHM6Ly9hY21lLXYwMi5hcGkubGV0c2VuY3J5cHQub3JnL2FjbWUvYWNjdC8yMTMxNjc1NDc1In0", "payload": "", "signature": "v9M5HzqKeMcyZoCP__BRJHEsGBYpFOlJ01J6-P_2qp5MJzTQdpgnva-_YFxn7ItRug2ZGIpLGJJOtqiqenSOOg"}'
+[Thu Feb  6 20:51:38 EST 2025] _postContentType='application/jose+json'
+[Thu Feb  6 20:51:38 EST 2025] Http already initialized.
+[Thu Feb  6 20:51:38 EST 2025] _CURL='curl --silent --dump-header /root/.acme.sh/http.header  -L  -g '
+[Thu Feb  6 20:51:39 EST 2025] _ret='0'
+[Thu Feb  6 20:51:39 EST 2025] responseHeaders='HTTP/2 200 
+server: nginx
+date: Fri, 07 Feb 2025 01:52:37 GMT
+content-type: application/json
+content-length: 1331
+boulder-requester: 2131675475
+cache-control: public, max-age=0, no-cache
+link: <https://acme-v02.api.letsencrypt.org/directory>;rel="index"
+replay-nonce: ES_SC8yEjvjL1T4DVY-Wl2Q2Jj-fNwnTPZDcPF5HFrY4p3LWQt0
+x-frame-options: DENY
+strict-transport-security: max-age=604800
+'
+[Thu Feb  6 20:51:39 EST 2025] code='200'
+[Thu Feb  6 20:51:39 EST 2025] original='{
+  "identifier": {
+    "type": "dns",
+    "value": "go2uk.net"
+  },
+  "status": "invalid",
+  "expires": "2025-02-14T01:52:32Z",
+  "challenges": [
+    {
+      "type": "http-01",
+      "url": "https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423495/qbI0Fw",
+      "status": "invalid",
+      "validated": "2025-02-07T01:52:34Z",
+      "error": {
+        "type": "urn:ietf:params:acme:error:connection",
+        "detail": "204.13.154.36: Fetching http://www.go2uk.net/.well-known/acme-challenge/Fip62urwyHDrNvoMQNXoI-sWWz5RBtEpqlp7847ToAc: Redirect loop detected",
+        "status": 400
+      },
+      "token": "Fip62urwyHDrNvoMQNXoI-sWWz5RBtEpqlp7847ToAc",
+      "validationRecord": [
+        {
+          "url": "http://go2uk.net/.well-known/acme-challenge/Fip62urwyHDrNvoMQNXoI-sWWz5RBtEpqlp7847ToAc",
+          "hostname": "go2uk.net",
+          "port": "80",
+          "addressesResolved": [
+            "204.13.154.36"
+          ],
+          "addressUsed": "204.13.154.36"
+        },
+        {
+          "url": "http://www.go2uk.net/.well-known/acme-challenge/Fip62urwyHDrNvoMQNXoI-sWWz5RBtEpqlp7847ToAc",
+          "hostname": "www.go2uk.net",
+          "port": "80",
+          "addressesResolved": [
+            "204.13.154.36"
+          ],
+          "addressUsed": "204.13.154.36"
+        }
+      ]
+    }
+  ]
+}'
+[Thu Feb  6 20:51:39 EST 2025] response='{"identifier":{"type":"dns","value":"go2uk.net"},"status":"invalid","expires":"2025-02-14T01:52:32Z","challenges":[{"type":"http-01","url":"https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423495/qbI0Fw","status":"invalid","validated":"2025-02-07T01:52:34Z","error":{"type":"urn:ietf:params:acme:error:connection","detail":"204.13.154.36: Fetching http://www.go2uk.net/.well-known/acme-challenge/Fip62urwyHDrNvoMQNXoI-sWWz5RBtEpqlp7847ToAc: Redirect loop detected","status": 400},"token":"Fip62urwyHDrNvoMQNXoI-sWWz5RBtEpqlp7847ToAc","validationRecord":[{"url":"http://go2uk.net/.well-known/acme-challenge/Fip62urwyHDrNvoMQNXoI-sWWz5RBtEpqlp7847ToAc","hostname":"go2uk.net","port":"80","addressesResolved":["204.13.154.36"],"addressUsed":"204.13.154.36"},{"url":"http://www.go2uk.net/.well-known/acme-challenge/Fip62urwyHDrNvoMQNXoI-sWWz5RBtEpqlp7847ToAc","hostname":"www.go2uk.net","port":"80","addressesResolved":["204.13.154.36"],"addressUsed":"204.13.154.36"}]}]}'
+[Thu Feb  6 20:51:39 EST 2025] original='{"identifier":{"type":"dns","value":"go2uk.net"},"status":"invalid","expires":"2025-02-14T01:52:32Z","challenges":[{"type":"http-01","url":"https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423495/qbI0Fw","status":"invalid","validated":"2025-02-07T01:52:34Z","error":{"type":"urn:ietf:params:acme:error:connection","detail":"204.13.154.36: Fetching http://www.go2uk.net/.well-known/acme-challenge/Fip62urwyHDrNvoMQNXoI-sWWz5RBtEpqlp7847ToAc: Redirect loop detected","status": 400},"token":"Fip62urwyHDrNvoMQNXoI-sWWz5RBtEpqlp7847ToAc","validationRecord":[{"url":"http://go2uk.net/.well-known/acme-challenge/Fip62urwyHDrNvoMQNXoI-sWWz5RBtEpqlp7847ToAc","hostname":"go2uk.net","port":"80","addressesResolved":["204.13.154.36"],"addressUsed":"204.13.154.36"},{"url":"http://www.go2uk.net/.well-known/acme-challenge/Fip62urwyHDrNvoMQNXoI-sWWz5RBtEpqlp7847ToAc","hostname":"www.go2uk.net","port":"80","addressesResolved":["204.13.154.36"],"addressUsed":"204.13.154.36"}]}]}'
+[Thu Feb  6 20:51:39 EST 2025] response='{"identifier":{"type":"dns","value":"go2uk.net"},"status":"invalid","expires":"2025-02-14T01:52:32Z","challenges":[{"type":"http-01","url":"https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423495/qbI0Fw","status":"invalid","validated":"2025-02-07T01:52:34Z","error":{"type":"urn:ietf:params:acme:error:connection","detail":"204.13.154.36: Fetching http://www.go2uk.net/.well-known/acme-challenge/Fip62urwyHDrNvoMQNXoI-sWWz5RBtEpqlp7847ToAc: Redirect loop detected","status": 400},"token":"Fip62urwyHDrNvoMQNXoI-sWWz5RBtEpqlp7847ToAc","validationRecord":[{"url":"http://go2uk.net/.well-known/acme-challenge/Fip62urwyHDrNvoMQNXoI-sWWz5RBtEpqlp7847ToAc","hostname":"go2uk.net","port":"80","addressesResolved":["204.13.154.36"],"addressUsed":"204.13.154.36"},{"url":"http://www.go2uk.net/.well-known/acme-challenge/Fip62urwyHDrNvoMQNXoI-sWWz5RBtEpqlp7847ToAc","hostname":"www.go2uk.net","port":"80","addressesResolved":["204.13.154.36"],"addressUsed":"204.13.154.36"}]}]}'
+[Thu Feb  6 20:51:39 EST 2025] status='invalid
+invalid'
+[Thu Feb  6 20:51:39 EST 2025] error='"error":{"type":"urn:ietf:params:acme:error:connection","detail":"204.13.154.36: Fetching http://www.go2uk.net/.well-known/acme-challenge/Fip62urwyHDrNvoMQNXoI-sWWz5RBtEpqlp7847ToAc: Redirect loop detected","status": 400'
+[Thu Feb  6 20:51:39 EST 2025] errordetail='204.13.154.36: Fetching http://www.go2uk.net/.well-known/acme-challenge/Fip62urwyHDrNvoMQNXoI-sWWz5RBtEpqlp7847ToAc: Redirect loop detected'
+[Thu Feb  6 20:51:39 EST 2025] go2uk.net: Invalid status. Verification error details: 204.13.154.36: Fetching http://www.go2uk.net/.well-known/acme-challenge/Fip62urwyHDrNvoMQNXoI-sWWz5RBtEpqlp7847ToAc: Redirect loop detected
+[Thu Feb  6 20:51:39 EST 2025] pid
+[Thu Feb  6 20:51:39 EST 2025] No need to restore nginx config, skipping.
+[Thu Feb  6 20:51:39 EST 2025] _clearupdns
+[Thu Feb  6 20:51:39 EST 2025] dns_entries
+[Thu Feb  6 20:51:39 EST 2025] Skipping dns.
+[Thu Feb  6 20:51:39 EST 2025] _on_issue_err
+[Thu Feb  6 20:51:39 EST 2025] Please check log file for more details: /root/centminlogs/acmetool.sh-debug-log-060225-205103.log
+[Thu Feb  6 20:51:39 EST 2025] _chk_vlist='go2uk.net#Fip62urwyHDrNvoMQNXoI-sWWz5RBtEpqlp7847ToAc.FQKA3D4I-bkis0mONPApGAQuW-dswTlHpijAmtXu6z0#https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423495/qbI0Fw#http-01#/home/nginx/domains/go2uk.net/public#https://acme-v02.api.letsencrypt.org/acme/authz/2131675475/472165423495,www.go2uk.net#6u7Tr6U4pBKk6Rk6PeOdmbVnCAhV48aiIjkB0th4_sk.FQKA3D4I-bkis0mONPApGAQuW-dswTlHpijAmtXu6z0#https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423505/lOe38g#http-01#/home/nginx/domains/go2uk.net/public#https://acme-v02.api.letsencrypt.org/acme/authz/2131675475/472165423505,'
+[Thu Feb  6 20:51:39 EST 2025] start to deactivate authz
+[Thu Feb  6 20:51:39 EST 2025] Trigger domain validation.
+[Thu Feb  6 20:51:39 EST 2025] _t_url='https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423495/qbI0Fw'
+[Thu Feb  6 20:51:39 EST 2025] _t_key_authz='Fip62urwyHDrNvoMQNXoI-sWWz5RBtEpqlp7847ToAc.FQKA3D4I-bkis0mONPApGAQuW-dswTlHpijAmtXu6z0'
+[Thu Feb  6 20:51:39 EST 2025] _t_vtype
+[Thu Feb  6 20:51:39 EST 2025] =======Sending Signed Request=======
+[Thu Feb  6 20:51:39 EST 2025] url='https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423495/qbI0Fw'
+[Thu Feb  6 20:51:39 EST 2025] payload='{}'
+[Thu Feb  6 20:51:39 EST 2025] Use cached jwk for file: /root/.acme.sh/ca/acme-v02.api.letsencrypt.org/directory/account.key
+[Thu Feb  6 20:51:39 EST 2025] Use _CACHED_NONCE='ES_SC8yEjvjL1T4DVY-Wl2Q2Jj-fNwnTPZDcPF5HFrY4p3LWQt0'
+[Thu Feb  6 20:51:39 EST 2025] nonce='ES_SC8yEjvjL1T4DVY-Wl2Q2Jj-fNwnTPZDcPF5HFrY4p3LWQt0'
+[Thu Feb  6 20:51:39 EST 2025] _URGLY_PRINTF
+[Thu Feb  6 20:51:39 EST 2025] xargs
+[Thu Feb  6 20:51:39 EST 2025] POST
+[Thu Feb  6 20:51:39 EST 2025] _post_url='https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423495/qbI0Fw'
+[Thu Feb  6 20:51:39 EST 2025] body='{"protected": "eyJub25jZSI6ICJFU19TQzh5RWp2akwxVDREVlktV2wyUTJKai1mTnduVFBaRGNQRjVIRnJZNHAzTFdRdDAiLCAidXJsIjogImh0dHBzOi8vYWNtZS12MDIuYXBpLmxldHNlbmNyeXB0Lm9yZy9hY21lL2NoYWxsLzIxMzE2NzU0NzUvNDcyMTY1NDIzNDk1L3FiSTBGdyIsICJhbGciOiAiRVMyNTYiLCAia2lkIjogImh0dHBzOi8vYWNtZS12MDIuYXBpLmxldHNlbmNyeXB0Lm9yZy9hY21lL2FjY3QvMjEzMTY3NTQ3NSJ9", "payload": "e30", "signature": "h1v42vFwm_c-c59qk-uvbCyMD0uVHQN4voPvxN-OljW-Hd7wd81_7YbjCyW6pe8OcMcLw4QL-FVb1iCaId37Bw"}'
+[Thu Feb  6 20:51:39 EST 2025] _postContentType='application/jose+json'
+[Thu Feb  6 20:51:39 EST 2025] Http already initialized.
+[Thu Feb  6 20:51:39 EST 2025] _CURL='curl --silent --dump-header /root/.acme.sh/http.header  -L  -g '
+[Thu Feb  6 20:51:39 EST 2025] _ret='0'
+[Thu Feb  6 20:51:39 EST 2025] responseHeaders='HTTP/2 400 
+server: nginx
+date: Fri, 07 Feb 2025 01:52:38 GMT
+content-type: application/problem+json
+content-length: 144
+boulder-requester: 2131675475
+cache-control: public, max-age=0, no-cache
+link: <https://acme-v02.api.letsencrypt.org/directory>;rel="index"
+replay-nonce: ES_SC8yE6CJXreijN6f9WHlrcAINsL80cTOGccyTIDdBmytr3RU
+'
+[Thu Feb  6 20:51:39 EST 2025] code='400'
+[Thu Feb  6 20:51:39 EST 2025] original='{
+  "type": "urn:ietf:params:acme:error:malformed",
+  "detail": "Unable to update challenge :: authorization must be pending",
+  "status": 400
+}'
+[Thu Feb  6 20:51:39 EST 2025] response='{
+  "type": "urn:ietf:params:acme:error:malformed",
+  "detail": "Unable to update challenge :: authorization must be pending",
+  "status": 400
+}'
+[Thu Feb  6 20:51:39 EST 2025] Trigger domain validation.
+[Thu Feb  6 20:51:39 EST 2025] _t_url='https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423505/lOe38g'
+[Thu Feb  6 20:51:39 EST 2025] _t_key_authz='6u7Tr6U4pBKk6Rk6PeOdmbVnCAhV48aiIjkB0th4_sk.FQKA3D4I-bkis0mONPApGAQuW-dswTlHpijAmtXu6z0'
+[Thu Feb  6 20:51:39 EST 2025] _t_vtype
+[Thu Feb  6 20:51:39 EST 2025] =======Sending Signed Request=======
+[Thu Feb  6 20:51:39 EST 2025] url='https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423505/lOe38g'
+[Thu Feb  6 20:51:39 EST 2025] payload='{}'
+[Thu Feb  6 20:51:39 EST 2025] Use cached jwk for file: /root/.acme.sh/ca/acme-v02.api.letsencrypt.org/directory/account.key
+[Thu Feb  6 20:51:39 EST 2025] Use _CACHED_NONCE='ES_SC8yE6CJXreijN6f9WHlrcAINsL80cTOGccyTIDdBmytr3RU'
+[Thu Feb  6 20:51:39 EST 2025] nonce='ES_SC8yE6CJXreijN6f9WHlrcAINsL80cTOGccyTIDdBmytr3RU'
+[Thu Feb  6 20:51:39 EST 2025] _URGLY_PRINTF
+[Thu Feb  6 20:51:39 EST 2025] xargs
+[Thu Feb  6 20:51:39 EST 2025] POST
+[Thu Feb  6 20:51:39 EST 2025] _post_url='https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423505/lOe38g'
+[Thu Feb  6 20:51:39 EST 2025] body='{"protected": "eyJub25jZSI6ICJFU19TQzh5RTZDSlhyZWlqTjZmOVdIbHJjQUlOc0w4MGNUT0djY3lUSURkQm15dHIzUlUiLCAidXJsIjogImh0dHBzOi8vYWNtZS12MDIuYXBpLmxldHNlbmNyeXB0Lm9yZy9hY21lL2NoYWxsLzIxMzE2NzU0NzUvNDcyMTY1NDIzNTA1L2xPZTM4ZyIsICJhbGciOiAiRVMyNTYiLCAia2lkIjogImh0dHBzOi8vYWNtZS12MDIuYXBpLmxldHNlbmNyeXB0Lm9yZy9hY21lL2FjY3QvMjEzMTY3NTQ3NSJ9", "payload": "e30", "signature": "xfqHMZDSqZtuUszJPOCsxgE-6NoWV7hqXBEUZFEJexRFxt53NnjZjB2mKpK_VR8u0T-pzfjIvmlHrqkWSJR2rA"}'
+[Thu Feb  6 20:51:39 EST 2025] _postContentType='application/jose+json'
+[Thu Feb  6 20:51:39 EST 2025] Http already initialized.
+[Thu Feb  6 20:51:39 EST 2025] _CURL='curl --silent --dump-header /root/.acme.sh/http.header  -L  -g '
+[Thu Feb  6 20:51:39 EST 2025] _ret='0'
+[Thu Feb  6 20:51:39 EST 2025] responseHeaders='HTTP/2 200 
+server: nginx
+date: Fri, 07 Feb 2025 01:52:38 GMT
+content-type: application/json
+content-length: 195
+boulder-requester: 2131675475
+cache-control: public, max-age=0, no-cache
+link: <https://acme-v02.api.letsencrypt.org/directory>;rel="index"
+link: <https://acme-v02.api.letsencrypt.org/acme/authz/2131675475/472165423505>;rel="up"
+location: https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423505/lOe38g
+replay-nonce: ES_SC8yEvF5ZqLPd1S0ZUOFWW0Gtpf_RPpN3VXwn_10NGly3p5M
+x-frame-options: DENY
+strict-transport-security: max-age=604800
+'
+[Thu Feb  6 20:51:40 EST 2025] code='200'
+[Thu Feb  6 20:51:40 EST 2025] original='{
+  "type": "http-01",
+  "url": "https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423505/lOe38g",
+  "status": "pending",
+  "token": "6u7Tr6U4pBKk6Rk6PeOdmbVnCAhV48aiIjkB0th4_sk"
+}'
+[Thu Feb  6 20:51:40 EST 2025] response='{"type":"http-01","url":"https://acme-v02.api.letsencrypt.org/acme/chall/2131675475/472165423505/lOe38g","status":"pending","token":"6u7Tr6U4pBKk6Rk6PeOdmbVnCAhV48aiIjkB0th4_sk"}'
+[Thu Feb  6 21:12:23 EST 2025] default_acme_server='https://acme-v02.api.letsencrypt.org/directory'
+[Thu Feb  6 21:12:23 EST 2025] ACME_DIRECTORY='https://acme-v02.api.letsencrypt.org/directory'
+[Thu Feb  6 21:12:23 EST 2025] _ACME_SERVER_HOST='acme-v02.api.letsencrypt.org'
+[Thu Feb  6 21:12:23 EST 2025] _ACME_SERVER_PATH='directory'
+[Thu Feb  6 21:12:23 EST 2025] Installing to /root/.acme.sh
+[Thu Feb  6 21:12:23 EST 2025] Installed to /root/.acme.sh/acme.sh
+[Thu Feb  6 21:12:23 EST 2025] Using config home: /root/.acme.sh
+[Thu Feb  6 21:12:23 EST 2025] ACME_DIRECTORY='https://acme-v02.api.letsencrypt.org/directory'
+[Thu Feb  6 21:12:23 EST 2025] _ACME_SERVER_HOST='acme-v02.api.letsencrypt.org'
+[Thu Feb  6 21:12:23 EST 2025] _ACME_SERVER_PATH='directory'
+[Thu Feb  6 21:12:23 EST 2025] options='/^export LE_CONFIG_HOME/d'
+[Thu Feb  6 21:12:23 EST 2025] Using sed  -i
+[Thu Feb  6 21:12:23 EST 2025] Found profile: /root/.bashrc
+[Thu Feb  6 21:12:23 EST 2025] Installing alias to '/root/.bashrc'
+[Thu Feb  6 21:12:23 EST 2025] Close and reopen your terminal to start using acme.sh
+[Thu Feb  6 21:12:23 EST 2025] Installing alias to '/root/.cshrc'
+[Thu Feb  6 21:12:23 EST 2025] options='/^setenv LE_CONFIG_HOME/d'
+[Thu Feb  6 21:12:23 EST 2025] Using sed  -i
+[Thu Feb  6 21:12:23 EST 2025] Installing alias to '/root/.tcshrc'
+[Thu Feb  6 21:12:23 EST 2025] Using config home: /root/.acme.sh
+[Thu Feb  6 21:12:23 EST 2025] ACME_DIRECTORY='https://acme-v02.api.letsencrypt.org/directory'
+[Thu Feb  6 21:12:23 EST 2025] _ACME_SERVER_HOST='acme-v02.api.letsencrypt.org'
+[Thu Feb  6 21:12:23 EST 2025] _ACME_SERVER_PATH='directory'
+[Thu Feb  6 21:12:23 EST 2025] Installing cron job
+[Thu Feb  6 21:12:23 EST 2025] bash has been found. Changing the shebang to use bash as preferred.
+[Thu Feb  6 21:12:24 EST 2025] GET
+[Thu Feb  6 21:12:24 EST 2025] url='https://api.github.com/repos/acmesh-official/acme.sh/git/refs/heads/master'
+[Thu Feb  6 21:12:24 EST 2025] timeout=30
+[Thu Feb  6 21:12:25 EST 2025] _CURL='curl --silent --dump-header /root/.acme.sh/http.header  -L  -g  --connect-timeout 30'
+[Thu Feb  6 21:12:25 EST 2025] ret='0'
+[Thu Feb  6 21:12:25 EST 2025] OK
+[Thu Feb  6 21:12:25 EST 2025] LE_WORKING_DIR='/root/.acme.sh'
+[Thu Feb  6 21:12:25 EST 2025] Running cmd: setdefaultca
+[Thu Feb  6 21:12:25 EST 2025] Changed default CA to: https://acme-v02.api.letsencrypt.org/directory
+[Thu Feb  6 21:12:26 EST 2025] LE_WORKING_DIR='/root/.acme.sh'
+[Thu Feb  6 21:12:26 EST 2025] Running cmd: createDomainKey
+[Thu Feb  6 21:12:26 EST 2025] Creating domain key
+[Thu Feb  6 21:12:26 EST 2025] Using config home: /root/.acme.sh
+[Thu Feb  6 21:12:26 EST 2025] default_acme_server='https://acme-v02.api.letsencrypt.org/directory'
+[Thu Feb  6 21:12:26 EST 2025] ACME_DIRECTORY='https://acme-v02.api.letsencrypt.org/directory'
+[Thu Feb  6 21:12:26 EST 2025] _ACME_SERVER_HOST='acme-v02.api.letsencrypt.org'
+[Thu Feb  6 21:12:26 EST 2025] _ACME_SERVER_PATH='directory'
+[Thu Feb  6 21:12:26 EST 2025] DOMAIN_PATH='/root/.acme.sh/go2uk.net'
+[Thu Feb  6 21:12:26 EST 2025] _createkey for file:/root/.acme.sh/go2uk.net/go2uk.net.key
+[Thu Feb  6 21:12:26 EST 2025] Using length 2048
+[Thu Feb  6 21:12:26 EST 2025] Using RSA: 2048
+[Thu Feb  6 21:12:26 EST 2025] The domain key is here: /root/.acme.sh/go2uk.net/go2uk.net.key

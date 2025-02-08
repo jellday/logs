@@ -1,0 +1,107 @@
+
+[1;32;40m-----------------------------------------------------
+(B[mupdating acme.sh client...
+[1;32;40m-----------------------------------------------------
+(B[mCloning into 'acme.sh'...
+[Thu Feb  6 20:51:06 EST 2025] Installing to /root/.acme.sh
+[Thu Feb  6 20:51:06 EST 2025] Installed to /root/.acme.sh/acme.sh
+[Thu Feb  6 20:51:06 EST 2025] Installing alias to '/root/.bashrc'
+[Thu Feb  6 20:51:06 EST 2025] Close and reopen your terminal to start using acme.sh
+[Thu Feb  6 20:51:06 EST 2025] Installing alias to '/root/.cshrc'
+[Thu Feb  6 20:51:07 EST 2025] Installing alias to '/root/.tcshrc'
+[Thu Feb  6 20:51:07 EST 2025] Installing cron job
+24 16 * * * "/root/.acme.sh"/acme.sh --cron --home "/root/.acme.sh" > /dev/null
+[Thu Feb  6 20:51:07 EST 2025] bash has been found. Changing the shebang to use bash as preferred.
+[Thu Feb  6 20:51:08 EST 2025] OK
+https://github.com/acmesh-official/acme.sh
+v3.1.0
+[1;32;40m-----------------------------------------------------
+(B[mset default acme.sh CA to letsencrypt:
+acme.sh --set-default-ca --server letsencrypt
+[Thu Feb  6 20:51:09 EST 2025] Changed default CA to: https://acme-v02.api.letsencrypt.org/directory
+[1;32;40m-----------------------------------------------------
+(B[macme.sh updated
+[1;32;40m-----------------------------------------------------
+(B[m
+[self-signed ssl cert check] required by acmetool.sh
+
+--2025-02-06 20:51:09--  https://gist.githubusercontent.com/centminmod/020e3580eb03f1c36ced83b94fe4e1c5/raw/origin.crt
+Resolving gist.githubusercontent.com (gist.githubusercontent.com)... 185.199.111.133, 185.199.110.133, 185.199.109.133, ...
+Connecting to gist.githubusercontent.com (gist.githubusercontent.com)|185.199.111.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 2154 (2.1K) [text/plain]
+Saving to: ‘origin.crt’
+
+     0K ..                                                    100% 19.5M=0s
+
+2025-02-06 20:51:09 (19.5 MB/s) - ‘origin.crt’ saved [2154/2154]
+
+/usr/local/nginx/conf/ssl/go2uk.net ~/tools/acme.sh
+[1;33;40m---------------------------------------------------------------
+(B[m[1;32;40mGenerating self signed SSL certificate...
+(B[m[1;32;40mCSR file can also be used to be submitted for paid SSL certificates
+(B[m[1;32;40mIf using for paid SSL certificates be sure to keep both private key and CSR safe
+(B[m[1;32;40mcreating CSR File: go2uk.net.csr
+(B[m[1;32;40mcreating private key: go2uk.net.key
+(B[m[1;32;40mcreating self-signed SSL certificate: go2uk.net.crt
+(B[mopenssl req -new -newkey rsa:2048 -sha256 -nodes -out go2uk.net.csr -keyout go2uk.net.key -subj "/C=US/ST=California/L=Los Angeles/O=go2uk.net/OU=go2uk.net/CN=go2uk.net"
+Generating a RSA private key
+...................+++++
+..........+++++
+writing new private key to 'go2uk.net.key'
+-----
+openssl x509 -req -days 36500 -sha256 -in go2uk.net.csr -signkey go2uk.net.key -out go2uk.net.crt
+Signature ok
+subject=C = US, ST = California, L = Los Angeles, O = go2uk.net, OU = go2uk.net, CN = go2uk.net
+Getting Private key
+
+[1;33;40m---------------------------------------------------------------
+(B[m[1;32;40mGenerating dhparam.pem file - can take a few minutes...
+(B[mGenerating DH parameters, 2048 bit long safe prime, generator 2
+This is going to take a long time
+....................................................................................................+..............................................................................................................................................................................+.........+........+..........................................................................................................................................................................................................................................................+................................................+.......................+.................+..........................................................................................+........................................................................................................................................................................+..................................................+...............................................................................................................................................................+....................................................................................................................................................................................................................................................+..................................................................................................................................................................................................................................................................+.............................................................................................................+.............................+................................................++*++*++*++*
+[1;33;40mdhparam file generation time: 11.575604389
+(B[m~/tools/acme.sh
+
+[sslvhostsetup] create /usr/local/nginx/conf/conf.d/go2uk.net.ssl.conf
+
+DEDI_LISTEN="listen   80;"
+Redirecting to /bin/systemctl reload nginx.service
+grep 'root' /usr/local/nginx/conf/conf.d/go2uk.net.conf
+   root /home/nginx/domains/go2uk.net/public;
+  root /home/nginx/domains/go2uk.net/public;
+                root  /home/nginx/domains/go2uk.net/public/house/rent/;
+                root  /home/nginx/domains/go2uk.net/public/house/tolet/;
+                root  /home/nginx/domains/go2uk.net/public/vehicle/;
+                root  /home/nginx/domains/go2uk.net/public/vehicle/car/;
+                root  /home/nginx/domains/go2uk.net/public/dianping/;
+         root /home/nginx/domains/go2uk.net/public$subdomain;
+grep 'root' /usr/local/nginx/conf/conf.d/go2uk.net.ssl.conf
+  root /home/nginx/domains/go2uk.net/public;
+
+-----------------------------------------------------------
+issue & install letsencrypt ssl certificate for go2uk.net
+-----------------------------------------------------------
+testcert value = live
+/root/.acme.sh/acme.sh --issue -d go2uk.net -d www.go2uk.net --days 60 --pre-hook "/usr/local/src/centminmod/tools/pre-acme-hooks.sh all-check go2uk.net" -w /home/nginx/domains/go2uk.net/public -k "2048" --useragent "centminmod-centos8-acmesh-webroot" --log /root/centminlogs/acmetool.sh-debug-log-060225-205103.log --log-level 2 --preferred-chain "ISRG"
+[Thu Feb  6 20:51:32 EST 2025] Using CA: https://acme-v02.api.letsencrypt.org/directory
+[Thu Feb  6 20:51:32 EST 2025] Runing pre hook:'/usr/local/src/centminmod/tools/pre-acme-hooks.sh all-check go2uk.net'
+Nginx root path: /home/nginx/domains/go2uk.net/public
+Le_Webroot: /home/nginx/domains/go2uk.net/public
+The root paths match. Proceeding with the acme.sh operation.
+[Thu Feb  6 20:51:32 EST 2025] Creating domain key
+[Thu Feb  6 20:51:32 EST 2025] The domain key is here: /root/.acme.sh/go2uk.net/go2uk.net.key
+[Thu Feb  6 20:51:32 EST 2025] Multi domain='DNS:go2uk.net,DNS:www.go2uk.net'
+[Thu Feb  6 20:51:35 EST 2025] Getting webroot for domain='go2uk.net'
+[Thu Feb  6 20:51:35 EST 2025] Getting webroot for domain='www.go2uk.net'
+[Thu Feb  6 20:51:35 EST 2025] Verifying: go2uk.net
+[Thu Feb  6 20:51:35 EST 2025] Pending. The CA is processing your order, please wait. (1/30)
+[Thu Feb  6 20:51:39 EST 2025] go2uk.net: Invalid status. Verification error details: 204.13.154.36: Fetching http://www.go2uk.net/.well-known/acme-challenge/Fip62urwyHDrNvoMQNXoI-sWWz5RBtEpqlp7847ToAc: Redirect loop detected
+[Thu Feb  6 20:51:39 EST 2025] Please check log file for more details: /root/centminlogs/acmetool.sh-debug-log-060225-205103.log
+LECHECK = 1
+
+log files saved at /root/centminlogs
+-rw-r--r-- 1 root root  47K Feb  6 20:51 acmetool.sh-debug-log-060225-205103.log
+-rw-r--r-- 1 root root 7.7K Feb  6 20:51 acmesh-issue_060225-205103.log
+
+
